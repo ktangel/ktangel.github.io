@@ -1,0 +1,8 @@
+.inskill{
+	position: relative;
+	font-size: 32px!important;
+	font-weight: bolder;
+}
+.inskill>.mach{
+	float: right;
+}
