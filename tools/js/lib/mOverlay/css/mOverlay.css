@@ -1,0 +1,157 @@
+@keyframes fade-in {
+	0% {opacity: 0;}/*初始状态 透明度为0*/
+	100% {opacity: 1;}/*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in {/*针对webkit内核*/
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+	0% {opacity: 1;}/*初始状态 透明度为0*/
+	100% {opacity: 0;}/*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-out {/*针对webkit内核*/
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.fade-in{
+	animation: fade-in;/*动画名称*/
+	animation-duration: 0.5s;/*动画持续时间*/
+	-webkit-animation:fade-in 0.5s;/*针对webkit内核*/
+}
+
+.fade-out{
+	animation: fade-out;/*动画名称*/
+	animation-duration: 0.5s;/*动画持续时间*/
+	-webkit-animation:fade-out 0.5s;/*针对webkit内核*/
+}
+
+.m-overlay{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	background-color: #999999;
+	z-index: 9998;
+}
+.m-modal{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  
+    -ms-transform:translate(-50%, -50%);  
+    -moz-transform:translate(-50%, -50%);  
+    -webkit-transform:translate(-50%, -50%);  
+    -o-transform:translate(-50%, -50%);  
+	width: 80%;
+	text-align: center;
+	background-color: #FFFFFF;
+	z-index: 9999;
+	border-radius: 4px;
+
+	animation: fade-in;/*动画名称*/
+	animation-duration: 0.5s;/*动画持续时间*/
+	-webkit-animation:fade-in 0.5s;/*针对webkit内核*/
+}
+.m-modal .m-title{
+	background-color: #2daeff;
+	color: #FFFFFF;
+	padding: 10px;
+	font-size: 16px;
+}
+.m-modal .m-content{
+	font-size: 13px;
+	margin: 10px auto;
+	padding: 10px;
+	background-size: 25px;
+}
+.m-modal .m-footer {
+	width: 80%;
+	margin: 10px auto;
+	font-size: 13px;
+}
+.m-footer div{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 8px 15px;
+	color: #FFFFFF;
+}
+.m-footer .m-ok{
+	margin: 0 10px;
+	background-color: #2daeff;
+	border-radius: 2px;
+}
+.m-footer .m-cancel{
+	background-color: #999999;
+	border-radius: 2px;
+}
+.m-tip{
+	background: none;
+}
+.m-tip .tip-content{
+	width: auto;
+	color: #FFF;
+	padding: 10px 20px;
+	font-size: 14px;
+	background-color: #2daeff;
+	border-radius: 5px;
+}
+.m-load{
+	background: none;
+}
+.m-load .load-content{
+	width: auto;
+	color: #FFF;
+	padding: 10px 20px;
+	font-size: 14px;
+	background-color: #FF540B;
+	border-radius: 5px;
+}
+.m-select{
+	position: relative;
+	width: 140px;
+	margin: 0 auto;
+}
+.m-options,.m-arrow{
+	display: inline-block;
+}
+/*
+.m-options{
+	color: #999999;
+	padding:10px 5px;
+	border-radius: 2px;
+	width:140px;
+	border:1px solid #999999;
+}*/
+.m-options{
+	height:40px;
+	-webkit-appearance:none;
+	appearance:none;
+	font-size:14px;
+	padding:0 10px;
+	display:block;
+	width:100%;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color: #FF540B;
+	color:#FFF;
+	border-radius:12px;
+	border:none;
+}
+.m-arrow{
+	position: absolute;
+	right:0;
+	background-color: #999999;
+	border:1px solid #999999;
+	padding:10px;
+	color: #FFF;
+	border-radius: 2px;
+}
