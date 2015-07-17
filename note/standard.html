@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1><strong>前端规范：</strong></h1>
+<hr />
+<pre><code>更新时间:2015/7/17 14:41:40   
+</code></pre>
+
+<pre>
+ &copy Leoliu
+</pre>
+<h2>HTML部分</h2>
+<ul>
+<li>下面的规范都是为HTML以整洁易维护为前提，所以首先尽量避免在HTML写样式，如实在无法避免，也请统一将样式写在文件的CSS文件引用之后的style标签体内，不要写标签内联样式。</li>
+<li>
+<p>对于CSS和JS文件的引用位置，CSS在头，JS在文档尾部就不用多说了；			 <br />
+引用优先级遵循如下规则：</p>
+<h4><code>基础框架库的CSS和JS，如JQ和Bootstrap及对应模板</code>。</h4>
+<h4><code>各种小工具插件，如表单验证插件，弹框插件</code>。</h4>
+<h4><code>项目公用CSS，公用的command方法和项目命名空间的API。</code></h4>
+<h4><code>最后引入当前页的样式和对应JS文件。</code></h4>
+</li>
+<li>
+<p>设置body标签 的ID 值为当前页的文件名称。</p>
+</li>
+<li>
+为body或是最外层的div 追加class类名，名称根据所在功能模块的英文名，比同一功能下的几个文件名的相似的前缀单词，这图里面的commodity和marque<br />
+<img src="http://ktangel.github.io/blog/guifan_files/Image.png" />  
+
+</li>
+<li>对于常见复用较高的表单，应该设置相同的类名，现在的大家直接用模板类来设置格式，而没有别的名字，维护很麻烦。</li>
+<li>类的命名规范，如果是form和button这种功能性比较突出的标签，类名建议可以为form-*<strong><em>,btn-</em></strong>，其它类型标签，就请按其内容所属功能或是数据特征进行命名。</li>
+<li>对于JS脚本生成的标签，建议在用$(*).html()方法写入dom时，对该元素或其子元素追加标识此元素为 js生成的类名 jscr-el，方便自己调试维护和添加代码可读性。  </li>
+</ul>
+<h2>CSS部分</h2>
+<ul>
+<li>
+<p>首先是批注原则：</p>
+<h4><code>CSS文件头标注对应CSS环境和版本</code></h4>
+<pre><code>/*
+@name: 易道ERP后台系统
+@description: 1.0
+@require: edaw.css
+@branch:base
+*/
+</code></pre>
+
+<h4><code>branch 注明所属分支，比如现在大家按文件夹分类的各功能类别的名.</code></h4>
+<h4><code>针对某特定页面的则标该页面名。</code></h4>
+<pre><code>/*
+@branch:人事管理  
+@pages:员工信息查看
+*/
+body#employee-detail #gender,
+body#employee-detail #stature,
+body#employee-detail #cardId,
+body#employee-detail #folk{
+    max-width: 250px;
+}
+</code></pre>
+
+</li>
+<li>
+<p>嵌套原则：</p>
+<h5><code>对于全局标签样式，嵌套上一级的公用类名，如无有明显含义的类名，则可不嵌套。</code></h5>
+<h5><code>对于针对特定几个页面的或是特定页的样式，则必须嵌套主节点ID或类名（如form、table标签或主DIV）。</code></h5>
+<h5><code>实在没有则现在就可以用到之前HTML规范里写好的主body的类或ID名。</code></h5>
+</li>
+<li>
+<p>对于复用属性，可利用多重选择器，一起设置，如上图中就有部分样例。</p>
+</li>
+</ul>
+<h2>JavaScript</h2>
+<blockquote>
+<p>目录结构：</p>
+</blockquote>
+<pre><code>|---/js/
+|---- /bootstrap/          框架和模板所用到的JS
+|---- /libs/juqery-1.9.x.min.js  jq等基础库  
+|---- /libs/pluginA/       使用到的js插件A  
+|---- /libs/pluginB/       使用到的js插件B  
+|---- /libs/pluginC/       使用到的js插件C  
+|---- /pageA~Z/            对应各页面所写的业务js目录
+|---- commond.js           单独书写的js(如公用方法）  
+|---- edow.js              单独书写的js(如一些业务API)  
+|---- plugins.js           调用的plugins汇总（如弹窗和表单验证调整后的API接口)  
+</code></pre>
+
+<ul>
+<li>引用的js库保留<strong>版本号</strong>，压缩版本的文件名保留.min，另外插件要把未压缩版本也放在该插件的.min压缩版本文件夹下，方便调试和功能修改时查看源码。</li>
+<li>PC端的JS虽说刚开始不用太注重性能优化，但至少要满足易读性和通用JS规范;</li>
+<li>能避免就尽量避免直接在HTML页面中写代码块。</li>
+<li>
+<p><strong>JS注释:</strong></p>
+<h5><code>如果包含了其子页的中的代码，应该把该子页面所用到的方法放一起,头部和尾部包括形进行标注属性哪个子页面。</code></h5>
+<pre><code>/**
+@pages 人事管理
+@comprise 业务处理函数返回值和所使用到的业务数据对象
+**/
+业务代码区
+/**
+人事管理END
+**/
+
+/**
+@pages 新增员工信息
+@comprise 业务处理函数返回值和所使用到的业务数据对象
+**/
+业务代码区
+/**
+新增员工信息END
+**/
+</code></pre>
+
+<h5><code>对于大量生成页面元素的方法，尽量作一下标注，并至少对主标签或全部加上一个标识的类名，方面后期样式的修改索引查找。</code></h5>
+</li>
+<li>尽量减少声名全局变量，将所需要用到的业务功能方法，数据转存或是处理对象，都尽量合并到一个全局API对象或是commond命名空间中，建议借鉴移动APP端的一些规范，将所有公用方法API放在一个对象waker中，将业务方法放在对应该页的一个以页面或是js名命名的对象中。</li>
+<li>对于插件类的吊用，对于复用很高的函数，虽然各页面需要使用的参数不一样，也可以在公用API中将该方法写好，然后将可能各页面需要使用到该插件的不同API通过参数传过来，接着对复用最多的参数值设置成不带参运行时的默认环境值；如我对toPage函数的改造，以及对ajax的小改造；</li>
+<li>尽量对公用方法中一些方法的传入的参数进行简化和兼容，比如能传对象或是数组的，就不要设置成只能接受拼接字串，当然这属于个人习惯，我个人建议优化接收参数的多样性，让公用方法使用起来简单些。</li>
+</ul>
+<h3>好了，暂时就这些，如有新的建议随时提出讨论。</h3>
+<hr />
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
