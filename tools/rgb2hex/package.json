@@ -1,0 +1,24 @@
+{
+    "main": "rgb2hex.htm",                         
+    "name": "RGBto2Hex",                                   
+    "description": "weker ec system manage",              	  
+    "version": "2.0.4",                             
+    "author": "weker",						 
+    "keywords": [ "weker", "weker360" ],   		  
+    "window": {                                       
+        "icon": "img/logo/logo2x.png",                 
+        "toolbar": false,                             
+        "width": 800,                                 
+        "height": 600,                                  
+        "min_width": 800,                             
+        "min_height": 600,
+        "max_width": 800,                             
+        "max_height": 600,
+        "frame": false,                               
+        "position": "center",                         
+        "resizable": false,                           
+        "fullscreen": false,                          
+        "show_in_taskbar": true                       
+    }
+
+}
