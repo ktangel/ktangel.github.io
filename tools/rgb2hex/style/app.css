@@ -1,5 +1,4 @@
 /* Artfully masterminded by ZURB  */
-
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
@@ -7,43 +6,85 @@
 :: Welcome
 :: Page Name 2
 */
-
-
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 
-body { background: #97D3BA; color: white; font-family: 'Crete Round', serif;}
-
-
+body {
+	background: #97D3BA;
+	color: white;
+	font-family: 'Crete Round', serif;
+}
 /* -----------------------------------------
    Welcome
 ----------------------------------------- */
-                                  
-#titleRow h1 {  font-size: 72px; color: white; position: absolute; left: -9999px; top: 0px;}                                          
 
-input.colorBox 
-{ 
-    display: inline-block; 
-    width: 120px; 
-    height: 120px; 
-    padding: 0px; 
-    outline: none;  
-    color: #97D3BA; 
-    font-size: 30px; 
-    text-align: center;
-    border: 10px solid #97D3BA;
-    margin: 0px;
+#resultRow {
+	margin-top: 10px!important;
+}
+.rgbview,
+#colorsRow label,
+#resultRow label {
+	color: white;
+	font-size: 36px;
+}
+#titleRow h1 {
+	font-size: 72px;
+	color: white;
+	position: absolute;
+	left: -9999px;
+	top: 0px;
+}
+input.colorBox {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	padding: 0px;
+	outline: none;
+	color: #97D3BA;
+	font-size: 30px;
+	text-align: center;
+	border: 10px solid #97D3BA;
+	margin: 0px;
+}
+.hexnum-body {
+	padding-top: 10px;
+	width: 170px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+}
+.hex-title {
+	/*float: left;*/
+}
+.hexnum-body>input {
+	/*float: left;*/
+	
+	font-size: 32px;
+	width: 120px;
+	padding: 0 4px;
+	height: 40px;
+	color: #2187E7;
+}
+.hexnum-body>label {
+	float: left;
+	font-size: 36px;
+	color: #fff;
+	padding-left: 15px;
+}
+.resultHex {
+	margin-top: 10px;
 }
 
-#colorsRow label, #resultRow label { color: white; font-size: 36px; }
-.colorContainer { padding-bottom: 5px !important; }
-
-.resultBox { width: 130px; height: 130px; border: 10px solid white;  display: inline-block; }
-
-
+.colorContainer {
+	padding-bottom: 5px !important;
+}
+.resultBox {
+	width: 130px;
+	height: 130px;
+	border: 10px solid white;
+	display: inline-block;
+}
 /* -----------------------------------------
    Page Name 2
 ----------------------------------------- */
-
-
