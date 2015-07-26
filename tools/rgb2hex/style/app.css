@@ -18,7 +18,13 @@ body {
 /* -----------------------------------------
    Welcome
 ----------------------------------------- */
-
+.copy{
+	position: relative;
+	text-align: center;
+}
+#colorsRow{
+	margin-top: 20px!important;
+}
 #resultRow {
 	margin-top: 10px!important;
 }
@@ -78,6 +84,9 @@ input.colorBox {
 
 .colorContainer {
 	padding-bottom: 5px !important;
+}
+.back{
+	background-color: #fff;
 }
 .resultBox {
 	width: 130px;

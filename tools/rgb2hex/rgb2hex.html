@@ -1,40 +1,55 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">     
-        <title>RGB<=>HEX互转工具</title>
-        <link rel="stylesheet" type="text/css" href="./style/foundation.min.css">
-        <link rel="stylesheet" type="text/css" href="./style/app.css">          
-       </script><script type="text/javascript" src="./style/foundation.min.js"></script>
-        <script type="text/javascript" src="./style/app.js"></script>
-    
-     <body>
-        <div class="row" id="colorsRow">                                 
-            <div class="two mobile-one columns offset-by-three text-center colorContainer">
-                <input type="text"  class="colorBox" id="colorR" placeholder="" tabindex="1" min="0" max="255" maxlength="3">
-                <label>红(R)</label>
-            </div>
-            <div class="two mobile-one columns  text-center colorContainer">          
-                <input type="text" class="colorBox" id="colorG" placeholder="" tabindex="2" min="0" max="255" maxlength="3"> 
-                <label>绿(G)</label>
-            </div>
-            <div class="two mobile-one columns end  text-center colorContainer">   
-                <input type="text" class="colorBox" id="colorB" placeholder="" tabindex="3" min="0" max="255" maxlength="3">  
-                <label>蓝(B)</label>
-            </div>
-        </div>
-        <div class="row" id="resultRow">
-            <div class="three mobile-one columns centered  text-center">
-                <div id="hexnum-body" class="hexnum-body">
-            	<label for="hexnum">#</label>
-            	<input type="text" id="hexnum" name="hexnum" class="hexnum" maxlength="6" />
-            </div>
-                <div class="resultBox"></div>
-            	<span id="rgbview" class="rgbview"></span>
-                <label class="resultHex">#b1d85c</label>
-            </div>
-        </div>
-        <div class="row">
-            
-        </div>
-    
-</body></html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>RGB
+			<=>HEX互转工具</title>
+		<link rel="stylesheet" type="text/css" href="./style/foundation.min.css">
+		<link rel="stylesheet" type="text/css" href="./style/app.css">
+		</script>
+		<script type="text/javascript" src="./style/foundation.min.js"></script>
+		<script type="text/javascript" src="./style/app.js"></script>
+
+		<body>
+<div class="footbut">
+				<div class="copy">
+				<h3>HEX&&RGB互转工具  1.0版  &copy;Leoliu</h3>
+				</div>
+			</div>
+			<div class="row" id="colorsRow">
+
+				<div class="two mobile-one columns offset-by-three text-center colorContainer">
+					<input type="text" class="colorBox" id="colorR" placeholder="" tabindex="1" min="0" max="255" maxlength="3">
+					<label>红(R)</label>
+				</div>
+				<div class="two mobile-one columns  text-center colorContainer">
+					<input type="text" class="colorBox" id="colorG" placeholder="" tabindex="2" min="0" max="255" maxlength="3">
+					<label>绿(G)</label>
+				</div>
+				<div class="two mobile-one columns end  text-center colorContainer">
+					<input type="text" class="colorBox" id="colorB" name="colorB" placeholder="" tabindex="3" min="0" max="255" maxlength="3">
+					<label>蓝(B)</label>
+				</div>
+				<div class="two mobile-one columns end  text-center colorContainer">
+					<input type="text" class="colorBox" id="opcity" name="opcity" placeholder="" tabindex="3" min="0" max="100" step="0.01" maxlength="3">
+					<label>opcity(%)</label>;
+				</div>
+			</div>
+			<div class="row" id="resultRow">
+				<div class="three mobile-one columns centered  text-center">
+					<div id="hexnum-body" class="hexnum-body">
+						<label for="hexnum">#</label>
+						<input type="text" id="hexnum" name="hexnum" class="hexnum" maxlength="6" />
+					</div>
+					<input type="color" class="setcolor resultBox" id="setcolor" name="setcolor" />
+					<span id="rgbview" class="rgbview"></span>
+					<label class="resultHex">#HEX</label>
+					<div class="back">
+						<div id="showcolor" class="resultBox"></div>
+					</div>
+				</div>
+			</div>
+			
+		</body>
+
+</html>

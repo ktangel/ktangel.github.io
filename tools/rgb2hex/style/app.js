@@ -72,7 +72,7 @@ function rgbToHex(r, g, b) {
 }
 
 $(document).ready(function() {
-	var rgb, rgbmsg, hex, hexnum,r,g,b;
+	var rgb, rgba, rgbmsg, hex, hexnum, r, g, b, opcity;
 	$('.colorBox').on("keydown", function(event) {
 		// Allow: backspace, delete, tab, escape, and enter
 		if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
@@ -87,24 +87,27 @@ $(document).ready(function() {
 			if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
 				event.preventDefault();
 			}
-
-
-
 		}
 	});
 
 	function setview() {
-		rgbmsg = "rgb(" + r + "\," + g + "\," + b + "\)";
+		if (opcity) {
+			rgba = "rgba(" + r + "\," + g + "\," + b + "\," + opcity + "\)";
+		}else{
+			opcity === 0 && (rgba = null);
+		}
+		rgb = "rgb(" + r + "\," + g + "\," + b + "\)";
 		$('.resultHex').text(hex);
-		//		alert(rgb);
-		$("#rgbview").text(rgbmsg);
-		$("#rgbview").text(rgb);
-		$('.resultBox').animate({
-			backgroundColor: hex
-		});
-		
+		$("#rgbview").text(rgba || rgb);
+		$('#setcolor').val(hex);
+		$('#showcolor').css("background-color", rgba || hex);
 	}
 	$('.colorBox').on("keyup", function() {
+		if (this.id === "opcity") {
+			if (this.value > 100) {
+				$(this).val(100);
+			};
+		}
 		if (this.value > 255) {
 			$(this).val(255);
 		};
@@ -114,13 +117,12 @@ $(document).ready(function() {
 		r = parseInt($('#colorR').val());
 		g = parseInt($('#colorG').val());
 		b = parseInt($('#colorB').val());
+		var opt = $('#opcity').val()
+		opcity = opt ? (opt / 100) : 0;
 		r = (r ? (r < 0 ? 0 : (r > 255 ? 255 : r)) : 0);
 		g = (g ? (g < 0 ? 0 : (g > 255 ? 255 : g)) : 0);
 		b = (b ? (b < 0 ? 0 : (b > 255 ? 255 : b)) : 0);
-		console.log(r,g,b)
 		hex = rgbToHex(r, g, b);
-
-		//		$('.resultBox').css("background-color",msg);
 		hexnum = hex.split("#");
 		hexnum = hexnum[1];
 		$('#hexnum').val(hexnum);
@@ -141,29 +143,33 @@ $(document).ready(function() {
 	});
 	resizeMe();
 	$("#hexnum").on("keyup", function() {
-		var self = $(this),tex = new RegExp("[^0-9a-fA-F]{1,6}");
-			hexnum = self.val();
-			function texis(a){
-				var f="";
-				$.each(a, function(n,s) {
-					f+="f";
-				});
-				var str = Array.prototype.toString;
-				return f;
-			}
-			if(tex.test(hexnum)){
-				hexnum=hexnum.replace(tex,texis);
-				self.val(hexnum);
-			};
-			hex = "#" + self.val();
+		var self = $(this),
+			tex = new RegExp("[^0-9a-fA-F]{1,6}");
+		hexnum = self.val();
+
+		function texis(a) {
+			var f = "";
+			$.each(a, function(n, s) {
+				f += "f";
+			});
+			var str = Array.prototype.toString;
+			return f;
+		}
+		if (tex.test(hexnum)) {
+			hexnum = hexnum.replace(tex, texis);
+			self.val(hexnum);
+		};
+		hex = "#" + self.val();
 		if (self.val()) {
 			rgb = $.Color(hex);
+			r = rgb._rgba[0];
+			g = rgb._rgba[1];
+			e = rgb._rgba[2];
 			$('#colorR').val(rgb._rgba[0]);
 			$('#colorG').val(rgb._rgba[1]);
 			$('#colorB').val(rgb._rgba[2]);
-			rgbmsg = "rgb(" + rgb._rgba[0] + "\," + rgb._rgba[1] + "\," + rgb._rgba[2] + "\)";
 			setview();
 		}
 	});
-})
+});
 $(window).resize(resizeMe);
