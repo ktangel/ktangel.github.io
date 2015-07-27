@@ -72,11 +72,19 @@ input.colorBox {
 	height: 40px;
 	color: #2187E7;
 }
-.hexnum-body>label {
+.hexnum-body>label,
+.plac-body>label {
 	float: left;
 	font-size: 36px;
 	color: #fff;
 	padding-left: 15px;
+}
+.plac-body>input{
+	font-size: 32px;
+	width: 170px;
+	padding: 0 4px;
+	height: 40px;
+	color: #2187E7;
 }
 .resultHex {
 	margin-top: 10px;

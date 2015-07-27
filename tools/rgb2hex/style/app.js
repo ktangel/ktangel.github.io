@@ -72,7 +72,7 @@ function rgbToHex(r, g, b) {
 }
 
 $(document).ready(function() {
-	var rgb, rgba, rgbmsg, hex, hexnum, r, g, b, opcity;
+	var rgb, rgba, rgbmsg, hex, hexnum, r, g, b, opcity,plac;
 	$('.colorBox').on("keydown", function(event) {
 		// Allow: backspace, delete, tab, escape, and enter
 		if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
@@ -123,8 +123,7 @@ $(document).ready(function() {
 		g = (g ? (g < 0 ? 0 : (g > 255 ? 255 : g)) : 0);
 		b = (b ? (b < 0 ? 0 : (b > 255 ? 255 : b)) : 0);
 		hex = rgbToHex(r, g, b);
-		hexnum = hex.split("#");
-		hexnum = hexnum[1];
+		hexnum = hex.replace('#',"");
 		$('#hexnum').val(hexnum);
 		setview();
 	});
@@ -142,6 +141,22 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	resizeMe();
+	$("#plac").on("keyup", function() {
+		var self = $(this);
+		if (self.val()) {
+			plac = self.val();
+			rgb = $.Color(plac);
+			r = rgb._rgba[0];
+			g = rgb._rgba[1];
+			b = rgb._rgba[2];
+			hex = rgbToHex(r, g, b);
+			$("#hexnum").val(hex.replace('#',""));
+			$('#colorR').val(rgb._rgba[0]);
+			$('#colorG').val(rgb._rgba[1]);
+			$('#colorB').val(rgb._rgba[2]);
+			setview();
+		}
+	});
 	$("#hexnum").on("keyup", function() {
 		var self = $(this),
 			tex = new RegExp("[^0-9a-fA-F]{1,6}");
