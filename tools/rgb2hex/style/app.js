@@ -160,6 +160,22 @@ $(document).ready(function() {
 			setview();
 		}
 	});
+	$("#setcolor").on("input",function(){
+		var self = $(this);
+		if (self.val()) {
+			plac = self.val();
+			rgb = $.Color(plac);
+			r = rgb._rgba[0];
+			g = rgb._rgba[1];
+			b = rgb._rgba[2];
+			hex = rgbToHex(r, g, b);
+			$("#hexnum").val(hex.replace('#',""));
+			$('#colorR').val(rgb._rgba[0]);
+			$('#colorG').val(rgb._rgba[1]);
+			$('#colorB').val(rgb._rgba[2]);
+			setview();
+		}
+	});
 	$("#hexnum").on("keyup", function() {
 		var self = $(this),
 			tex = new RegExp("[^0-9a-fA-F]{1,6}");

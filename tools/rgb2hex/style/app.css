@@ -81,7 +81,7 @@ label,
 	border: 5px solid #97D3BA;
 }
 @media only screen and (min-width: 1000px) {
-	.copy{
+	.copy {
 		font-size: 28px;
 		margin: 10px;
 		padding: 5px;
@@ -145,7 +145,7 @@ label,
 	.hexnum-body {
 		width: 300px;
 	}
-	.hexnum-body>label{
+	.hexnum-body>label {
 		padding-left: 58px;
 	}
 	.plac-body {
@@ -176,9 +176,35 @@ label,
 	margin-top: 5px;
 	text-align: center;
 }
+.back,
+.back div {
+	position: relative;
+}
+.title {
+	/*margin-top: 20px;*/
+	
+	padding: 5px;
+	background-color: #888888;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+#showborder>span {
+	position: absolute;
+	top: 50%;
+	left: -75px;
+}
+#showcolor>span {
+	position: absolute;
+	top: 35px;
+	left: 20px;
+}
+.show-body>span {
+	position: relative;
+	top: 20px;
+}
 .show-body .back {
 	background-color: #FFFFFF;
-	width: 180px;
+	width: 260px;
 	padding: 15px;
 	margin: 5px auto;
 }
@@ -187,7 +213,7 @@ label,
 	height: 80px;
 	padding: 10px;
 }
-#showborder{
+#showborder {
 	margin: 0 auto;
 	width: 100px;
 	padding: 15px;
@@ -195,17 +221,27 @@ label,
 	border-color: navajowhite;
 	border-radius: 10px;
 	/*box-shadow: 5px 5px 5px #000066;*/
-	
 }
 @media only screen and (min-width: 1000px) {
+	#showborder>span {
+		top: 50%;
+		left: -85px;
+	}
+	#showcolor>span {
+		top: 60px;
+		left: 35px;
+	}
+	.show-body>span {
+		top: 20px;
+	}
 	.show-body .back {
-		width: 300px;
+		width: 350px;
 	}
 	#showcolor {
 		width: 130px;
 		height: 130px;
 	}
-	#showborder{
+	#showborder {
 		width: 150px;
 	}
 }
@@ -214,7 +250,7 @@ label,
 .set-body>div:after,
 .set-body>div:before,
 .colorRGB:after,
-.show-body:after{
+.show-body:after {
 	content: '';
 	display: table;
 	clear: both;
