@@ -97,10 +97,13 @@ $(document).ready(function() {
 			opcity === 0 && (rgba = null);
 		}
 		rgb = "rgb(" + r + "\," + g + "\," + b + "\)";
+		var shadow = "5px 5px 10px "+ (rgba || hex);
 		$('.resultHex').text(hex);
 		$("#rgbview").text(rgba || rgb);
 		$('#setcolor').val(hex);
 		$('#showcolor').css("background-color", rgba || hex);
+		$('#showborder').css('border-color',rgba || hex);
+		$('.back').css('box-shadow',shadow);
 	}
 	$('.colorBox').on("keyup", function() {
 		if (this.id === "opcity") {

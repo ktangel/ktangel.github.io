@@ -18,90 +18,204 @@ body {
 /* -----------------------------------------
    Welcome
 ----------------------------------------- */
-.copy{
-	position: relative;
-	text-align: center;
-}
-#colorsRow{
-	margin-top: 20px!important;
-}
-#resultRow {
-	margin-top: 10px!important;
-}
-.rgbview,
-#colorsRow label,
-#resultRow label {
-	color: white;
-	font-size: 36px;
-}
-#titleRow h1 {
-	font-size: 72px;
-	color: white;
-	position: absolute;
-	left: -9999px;
-	top: 0px;
-}
-input.colorBox {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	padding: 0px;
-	outline: none;
-	color: #97D3BA;
-	font-size: 30px;
-	text-align: center;
-	border: 10px solid #97D3BA;
-	margin: 0px;
-}
-.hexnum-body {
-	padding-top: 10px;
-	width: 170px;
-	text-align: center;
-	margin: auto;
-	position: relative;
-}
-.hex-title {
-	/*float: left;*/
-}
-.hexnum-body>input {
-	/*float: left;*/
-	
-	font-size: 32px;
-	width: 120px;
-	padding: 0 4px;
-	height: 40px;
-	color: #2187E7;
+
+label,
+.rgbview {
+	color: #fff;
+	font-size: 20px;
+	padding: 2px 4px;
 }
 .hexnum-body>label,
 .plac-body>label {
 	float: left;
-	font-size: 36px;
-	color: #fff;
-	padding-left: 15px;
 }
-.plac-body>input{
-	font-size: 32px;
-	width: 170px;
+@media only screen and (min-width: 500px) {
+	.row {
+		width: 500px;
+		min-width: 500px;
+		max-width: 100%;
+		margin: 0 10%;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	.row {
+		width: 1200px;
+		max-width: 100%;
+		min-width: 768px;
+		margin: 0 auto;
+	}
+}
+.copy {
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	background-color: #808080;
+}
+.colorRGB {
+	text-align: center;
+}
+.colorContainer {
+	width: 350px;
+	list-style: none;
+	margin: 0 auto;
+	position: relative;
+}
+.colorContainer>li {
+	text-align: center;
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 auto;
+	padding: 5px 5px;
+}
+.colorContainer>li input {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	color: #2187E7;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	outline: none;
+	border: 5px solid #97D3BA;
+}
+@media only screen and (min-width: 1000px) {
+	.copy{
+		font-size: 28px;
+		margin: 10px;
+		padding: 5px;
+	}
+	label,
+	.rgbview {
+		font-size: 36px;
+	}
+	.colorContainer {
+		width: 700px;
+		padding-bottom: 5px !important;
+	}
+	.colorContainer>li {
+		padding: 0 20px;
+	}
+	.colorContainer>li>input {
+		width: 100px;
+		height: 100px;
+		font-size: 30px;
+		border: 10px solid #97D3BA;
+	}
+}
+.set-body {
+	margin: 0 auto;
+}
+.set-body .hexnum-body,
+.set-body .plac-body,
+.set-body .color-body {
+	margin: 0 auto;
+	position: relative;
+}
+.hexnum-body {
+	width: 120px;
+}
+.plac-body {
+	width: 180px;
+}
+.hexnum-body>input {
+	width: 65px;
+}
+.plac-body>input {
+	width: 90px;
+}
+.hexnum-body>input,
+.plac-body>input {
+	font-size: 16px;
 	padding: 0 4px;
-	height: 40px;
+	height: 30px;
 	color: #2187E7;
 }
-.resultHex {
-	margin-top: 10px;
+.color-body {
+	width: 80px;
 }
-
-.colorContainer {
-	padding-bottom: 5px !important;
+.color-body .setcolor {
+	width: 50px;
+	height: 50px;
+	margin-top: 2px;
+	border: 4px solid white;
 }
-.back{
-	background-color: #fff;
+@media only screen and (min-width: 1000px) {
+	.hexnum-body {
+		width: 300px;
+	}
+	.hexnum-body>label{
+		padding-left: 58px;
+	}
+	.plac-body {
+		width: 300px;
+	}
+	.color-body {
+		width: 300px;
+	}
+	.hexnum-body>input {
+		font-size: 32px;
+		width: 130px;
+		height: 40px;
+		padding: 0 4px;
+	}
+	.plac-body>input {
+		font-size: 28px;
+		width: 170px;
+		height: 40px;
+		padding: 0 4px;
+	}
+	.color-body .setcolor {
+		margin-left: 80px;
+		width: 100px;
+		height: 100px;
+	}
 }
-.resultBox {
-	width: 130px;
-	height: 130px;
-	border: 10px solid white;
-	display: inline-block;
+.show-body {
+	margin-top: 5px;
+	text-align: center;
 }
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
+.show-body .back {
+	background-color: #FFFFFF;
+	width: 180px;
+	padding: 15px;
+	margin: 5px auto;
+}
+#showcolor {
+	width: 80px;
+	height: 80px;
+	padding: 10px;
+}
+#showborder{
+	margin: 0 auto;
+	width: 100px;
+	padding: 15px;
+	border: 10px solid;
+	border-color: navajowhite;
+	border-radius: 10px;
+	/*box-shadow: 5px 5px 5px #000066;*/
+	
+}
+@media only screen and (min-width: 1000px) {
+	.show-body .back {
+		width: 300px;
+	}
+	#showcolor {
+		width: 130px;
+		height: 130px;
+	}
+	#showborder{
+		width: 150px;
+	}
+}
+.colorContainer:after,
+.colorContainer:before,
+.set-body>div:after,
+.set-body>div:before,
+.colorRGB:after,
+.show-body:after{
+	content: '';
+	display: table;
+	clear: both;
+}
