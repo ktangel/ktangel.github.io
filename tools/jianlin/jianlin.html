@@ -5,105 +5,64 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<style>
-		table {
-			border-collapse: collapse;
-		}
-		table th {
-			border: 1px solid #98BF21;
-			width: 100px;
-			font-size: 20px;
-			font-weight: bold;
-			padding: 4px;
-			background-color: #A7C942;
-			color: #FFF;
-		}
-		table td {
-			border: 1px solid #98BF21;
-			padding: 4px;
-			font-size: 18px;
-		}
-		tbody tr:nth-child(even) {
-			color: #000;
-			background-color: #EAF2D3;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="jianlin.css" />
 
 	<body>
-		<table class="tb-cut">
-			<thead>
-				<h2>戒指</h1>
-				<tr><th>材料名</th><th>数量</th><th>单价</th><th>小计</th></tr>
-			</thead>
-			<tbody>
-			<tr><td>月石</td><td>50</td><td>0.332</td><td>555</td></tr>
-			<tr class="alt"><td>月石</td><td>50</td><td>0.332</td><td>555</td></tr>
-			<tr><td>月石</td><td>50</td><td>0.332</td><td>555</td></tr>
-			<tr class="alt"><td>月石</td><td>50</td><td>0.332</td><td>555</td></tr>
-			</tbody>
-		</table>
-		<p id="testp"></p>
-		<script	type="text/javascript" src="js/jquery-min.js"></script>
+		<div class="container">
+			<div class="heading">
+				<div>剑灵升级费用计算器</div>
+			</div>
+			<div class="content">
+				<div id="title" class="tab-title">戒指</div>
+				<div id="lev" class="lev-title">戒指</div>
+				<div class="tab-wrap">
+					<div class="tab-body">
+						<div class="tab-head">
+							<span>材料名</span>
+							<span>数量</span>
+							<span>单价</span>
+							<span>小计</span>
+						</div>
+						<div class="tab-wrap">
+							<div class="lev-title-fixed">2段升2段</div>
+								<ul class="tab-content">
+									<li>
+										<span>月石</span>
+										<span>50</span>
+										<span>0.332</span>
+										<span>55125</span>
+									</li>
+									<li>
+										<span>月石</span>
+										<span>50</span>
+										<span>0.332</span>
+										<span>555</span>
+									</li>
+									<li>
+										<span>月石</span>
+										<span>50</span>
+										<span>0.332</span>
+										<span>555</span>
+									</li>
+									<li>
+										<span>月石</span>
+										<span>50</span>
+										<span>0.332</span>
+										<span>555</span>
+									</li>
+								</ul>
+							
+						</div>
+					</div>
+				</div>
+				<p id="testp"></p>
+			</div>
+			<div class="footer">底部</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-min.js"></script>
 		<script src="js/avalon.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/pinyinstr.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-	var leveldata={};
-	var cldata={};
-		var dataarr = [];
-		function getdata(arr){
-			$.each(arr, function(s,n) {    
-			var str = n[0],price = n[1]				                                                          
-			var cn = makePy(str);
-				$.each(cn, function(a,b) {    
-				!cldata[b]&&(cldata[b]={
-				'name':str,
-				'price':price
-			})                                                          
-				});
-			
-			});
-		}
-		var sclist = [
-			['月石',0.96],
-			['鬼魂石',2.05],
-			["灵石",0.0493],
-			["灵石",0.0493],
-			["手续费",1],
-			["白青高级进化石",260],
-			["传说宝玉",1.20],
-			["传说武魂",4.19]
-		];
-		getdata(sclist);
-		function initdata(obj){
-			$.each(obj, function(s,n) {
-				dataarr.push(n);
-				
-			});
-//			return dataarr;
-		}
-		initdata(dataarr);
-		$.ajax({
-			type:"get",
-			url:"price.txt",
-			success:function(obj){
-				if(!obj){
-					console.log("获取文件数据失败");
-					return false;
-				}
-				console.log(typeof obj)
-				$("#testp").html(obj)
-				var s = /\n/,
-//				var obj = new String(obj);
-				 obj = obj.split(s);
-				console.log([obj]);
-				sclist = [];
-				$.each(obj, function(s,n) {    
-					var N = n.split("\t");
-					sclist.push(N);
-				});
-				getdata(sclist);
-			}
-		});
-		</script>
+		<script src="js/model/jianlin.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

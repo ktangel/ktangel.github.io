@@ -1,0 +1,114 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+div {
+	display: block;
+}
+.container {
+	position: relative;
+	background-color: #E3F4F9;
+	width: 500px;
+	margin: 0 auto;
+}
+@media only screen and (min-width: 960px) {
+	.container {
+		width: 920px;
+	}
+}
+@media only screen and (min-width: 1280px) {
+	.container {
+		width: 1240px;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.container {
+		width: 1400px;
+	}
+}
+.heading{
+	text-align: center;
+	font-size: 20px;
+	background-color: #262626;
+	color: #fff;
+}
+.tab-title {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 10px;
+}
+.lev-title{
+	font-size: 20px;
+	font-weight: bold;
+}
+.content{
+	text-align: center;
+}
+.tab-cut{
+	position: relative;
+	margin: 0 auto;
+}
+.tab-wrap{
+	margin: 0 auto;
+	position: relative;
+}
+.lev-title-fixed{
+	max-width: 1em;
+	top: 0;
+	left: -20px;
+	bottom: 0;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #660000;
+}
+
+.tab-body{
+	position: relative;
+	width: 500px;
+	margin: 0 auto;
+}
+.tab-head{
+	position: relative;
+	background-color: #A7C942;
+}
+.tab-head>span{
+	font-size: 20px;
+	color: #FFF;
+	background-color: #A7C942;
+	font-weight: bold;
+}
+
+.tab-content{
+	list-style: none;
+}
+.tab-content>li{
+	position: relative;
+}
+.tab-content>li:nth-child(even)>span {
+	color: #000;
+	background-color: #EAF2D3;
+}
+.tab-head>span,
+.tab-content>li>span{
+	font-family: "微软雅黑";
+	float: left;
+	display:  block;
+	border: 1px solid #98BF21;
+	width: 103px;
+	padding: 4px 10px;
+}
+
+
+.tab-content:after,
+.tab-content:before,
+.tab-head:after{
+	content: " ";
+	display: table;
+	height: 0;
+	overflow: hidden;
+	margin: -2px;
+	visibility: hidden;
+	clear: both;
+}
