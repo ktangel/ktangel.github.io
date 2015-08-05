@@ -1,0 +1,21 @@
+/*表单验证样式*/
+.inputerr{
+	background-color:rgba(255,10,50,.1);
+	border: 1px solid rgba(255,10,50,.9);
+	box-shadow: inset 1px 0 3px rgba(255,10,50,.5);
+}
+/*提示弹出框样式，input标签的一定要有一层父DIV并有定位*/
+.inputerrtip{
+	position: relative;
+}
+.inputerrtip span.tiptext{
+	position: absolute;
+	text-align:center;
+	font-size: 16px;
+	line-height: 20px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	color: rgba(255,10,50,.9);
+}

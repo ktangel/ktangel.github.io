@@ -1,0 +1,65 @@
+/*============= 表单样式 ＝＝＝＝＝＝＝＝＝＝*/
+
+.content div {
+	margin: 6px 4px;
+}
+.content textarea {
+	height: 60px;
+}
+.content input {
+	margin-left: 4px;
+}
+.content .in-modityTime input,
+.content .in-discoverTime input,
+.content .in-submitPerson input,
+.content .in-dutyPerson input {
+	font-size: 14px;
+}
+.content .in-bugLevel select {
+	font-size: 15px;
+}
+.content .in-submitPerson input,
+.content .in-dutyPerson input {
+	padding-left: 2px;
+}
+.viewbody>div span:first-child {
+	color: #666666;
+	font-size: 16px;
+	font-weight: bold;
+}
+.center-view .content span {
+	font-size: 14px;
+	padding: 0 4px;
+}
+.center-view .content span.status {
+	font-weight: bold;
+	color: red;
+}
+.content .matterText p,
+.content .modityText p,
+.content .lossText p {
+	word-wrap: break-word;
+	width: 100%;
+	height: auto;
+	font-size: 14px;
+	padding: 4px;
+}
+.center-view .content textarea {
+	margin-top: 10px;
+	min-height: 88px;
+	width: 100%;
+	padding: 5px;
+}
+#status{
+	margin-right: 4px;
+}
+label[for="status"]{
+	margin-right: 10px;
+	margin-top: 6px;
+	padding: 4px;
+	display: block;
+	font-size: 18px;
+	border: 2px #FCAB2B;
+	border-style: groove;
+	background-color: #fff;
+}

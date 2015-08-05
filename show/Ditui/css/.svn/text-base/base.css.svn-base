@@ -1,0 +1,654 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+p {
+	margin: 7px 2px;
+	padding: 2px;
+}
+div {
+	display: block;
+}
+body {
+	font-family: arial;
+	font-size: 14px;
+	touch-action: none;
+	-ms-touch-select: none;
+}
+a {
+	text-decoration: none;
+}
+button:focus,
+button:hover {
+	border-style: none;
+}
+.pushup {
+	bottom: 255px;
+	left: 35%;
+	z-index: 99;
+}
+.pushdown {
+	z-index: 100;
+	top: 255px;
+	left: 35%;
+}
+.pushdown:hover,
+.pushup:hover {
+	background-color: #666666;
+}
+.pushdown,
+.pushup {
+	display: none;
+	position: absolute;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background-color: orangered;
+}
+#wrapper {
+	position: absolute;
+	top: 55px;
+	bottom: 50px;
+	z-index: 1;
+	width: 100%;
+	/*	height: 100%;*/
+	
+	background: #F4F4F4;
+	overflow: hidden;
+}
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.center-view .content {
+	min-height: 580px;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5px;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #000000;
+}
+.newlist {
+	position: absolute;
+	right: 100px;
+	top: 12px;
+}
+.newlist button,
+.footbut button,
+.nav-footer button,
+.alert-but button {
+	border: 1px solid;
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 20px;
+	padding-left: 2px;
+	height: 34px;
+	width: 64px;
+}
+.footbut {
+	display: block!important;
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	max-height: 50px;
+	/*min-width: 310px;*/
+	
+	width: 100%;
+	background-color: #080808;
+	text-align: center;
+}
+.footbut .footnavbar {
+	position: relative;
+	margin-top: 8px;
+	width: 100%;
+	max-height: 60px;
+	list-style: none;
+}
+.footnavbar > li {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: 0;
+}
+.nav-footer {
+	margin-top: 15px;
+	text-align: center;
+	margin-bottom: 6px;
+}
+.close:focus {
+	background: #888888;
+}
+.nav-close,
+.close {
+	background-color: #EEE;
+}
+.newbut:focus,
+.getdel:focus,
+.getedit :focus {
+	background: #888888;
+}
+.getdel,
+.enter {
+	background: #fe5051;
+	color: #fff;
+}
+.newbut {
+	background: #fcab2b;
+	color: #fff;
+}
+.getedit {
+	background: #3da2e3;
+	color: #fff;
+}
+.save,
+.add {
+	background: #3da2e3;
+	color: #fff;
+}
+.add:focus,
+.save:focus {
+	background: #888888;
+}
+.footbut .footnavbar .save,
+.footbut .footnavbar .add,
+.footbut .footnavbar .getedit {
+	float: left;
+	margin-left: 15%;
+}
+.footbut .footnavbar .close,
+.footbut .footnavbar .getdel {
+	float: right;
+	margin-right: 15%;
+}
+/*============== 弹出框样式＝＝＝＝＝＝＝＝＝＝*/
+/*表单验证样式*/
+.inputerr{
+	background-color:rgba(255,10,50,.1);
+	border: 1px solid rgba(255,10,50,.9);
+	box-shadow: inset 1px 0 3px rgba(255,10,50,.5);
+}
+/*提示弹出框样式，input标签的一定要有一层父DIV并有定位*/
+.inputerrtip{
+	position: relative;
+}
+.inputerrtip span.tiptext{
+	position: absolute;
+	text-align:center;
+	font-size: 16px;
+	line-height: 20px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	color: rgba(255,10,50,.9);
+}
+
+
+
+.view-alert {
+	display: none;
+}
+.alert-Table {
+	text-align: center;
+	position: absolute;
+	z-index: 1400;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+	display: table;
+}
+.alert-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.alert-cell .alert-center {
+	border-radius: 15px;
+	background: #F4F4F4;
+	position: relative;
+	max-width: 80%;
+	min-width: 50%;
+	margin: 0 auto;
+}
+.alert-title {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 36px;
+	height: 40px;
+	border-bottom: 2px solid #E4B9B9;
+	margin: 5px 0;
+}
+.alert-message {
+	margin: auto;
+	overflow: scroll;
+	font-size: 18px;
+	padding: 20px 10px;
+	max-height: 300px;
+}
+.alert-but {
+	border-top: 1px solid #E4B9B9;
+	height: 80px;
+	margin: auto;
+}
+.alert-but .but-fixed {
+	height: 50px;
+}
+.alert-but .alert-enter {
+	float: right;
+	padding: 15px;
+}
+.alert-but .alert-close button,
+.alert-but .alert-enter button {
+	height: 35px;
+	width: 60px;
+	font-size: 20px;
+}
+.alert-but .alert-close {
+	padding: 15px;
+	float: left;
+}
+/*============== 弹出框样式＝＝＝＝＝＝＝＝＝＝*/
+
+.view-loading {
+	display: none;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background-color: orangered;
+}
+/*============== 表单检查JQ插入样式＝＝＝＝＝＝＝＝＝＝*/
+
+div.hover-wrap {
+	position: relative;
+	display: inline;
+}
+div.hover-wrap input.invalid {
+	border: 2px solid red;
+}
+div.hover-wrap ul.errors {
+	display: none;
+}
+.div.hover-wrap label.hover {
+	position: relative;
+	top: -0.7em;
+	left: 5px;
+	color: #666;
+}
+span.required {
+	color: red;
+	font-size: 30px;
+	font-weight: bolder;
+}
+.container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*============== nav=布局＝＝＝＝＝＝＝＝＝＝*/
+
+@media (min-width: 768px) {
+	.container {
+		width: 760px;
+	}
+}
+.navbar-modityTexted-top .navbar-collapse {
+	max-height: 80%;
+	overflow: hidden;
+}
+.navbar-brand {
+	font-family: "arial black";
+	float: left;
+	padding: 5px 5px;
+	height: 40px;
+	line-height: 20px;
+	font-size: 15px;
+	margin-left: 15px;
+}
+#navbar-brand {
+	display: block;
+	margin-top: 13px;
+	cursor: pointer;
+}
+#date {
+	display: none;
+}
+#date>button.all {
+	margin-left: 10px;
+	padding: 7px;
+	border: transparent;
+	border-radius: 2px;
+	background-color: #FFFFFF;
+}
+#date>button:hover {
+	background-color: #666666;
+}
+.navbar-brand label {
+	display: block;
+}
+.collapse {
+	display: none;
+	visibility: hidden;
+}
+.collapse.in {
+	display: block;
+	visibility: visible;
+}
+.navbar-collapse.in {
+	overflow-y: auto;
+}
+.navbar-collapse {
+	padding-right: 15px;
+	padding-left: 15px;
+	overflow-x: visible;
+	-webkit-overflow-scrolling: touch;
+	border-top: 1px solid transparent;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.collapsing {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+	-webkit-transition-duration: .35s;
+	-o-transition-duration: .35s;
+	transition-duration: .35s;
+	-webkit-transition-property: height, visibility;
+	-o-transition-property: height, visibility;
+	transition-property: height, visibility;
+}
+.navbar-header {
+	min-height: 50px;
+}
+.navbar {
+	min-height: 50px;
+}
+.nav {
+	max-height: 405px;
+	overflow-x: auto;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+.pushdown-list,
+.pushup-list {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #FF4500;
+	margin-top: 5px;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+	box-shadow: inset 0px 1px 0 rgba(255, 255, 255, .1);
+}
+.pushup-list {
+	display: block;
+}
+.pushdown-list {
+	display: block;
+}
+.nav > li {
+	position: relative;
+	display: block;
+}
+.nav-list div.matterText-ti {
+	display: inline;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.nav-list div.matterText-ti p {
+	text-overflow: ellipsis!important;
+	overflow: hidden;
+	max-width: 90%;
+	height: 30px;
+	font-weight: normal;
+}
+.nav-list>div>p>span {
+	font-weight: normal;
+	margin-left: 6px;
+	font-size: 15px;
+	width: 100%;
+	color: #FFF;
+}
+.nav-list>div>p{
+	font-size: 14px;
+	font-weight: bolder;
+	color: #FCAB2B;
+}
+.nav-list .status-ti {
+	position: absolute;
+	font-size: 16px;
+	font-weight: bold;
+	right: 15px;
+	bottom: 15px;
+	color: #FFF;
+	padding: 5px;
+	border: transparent;
+	border-radius: 4px;
+}
+.nav > li > .nav-list {
+	position: relative;
+	display: block;
+	padding: 2px 10px;
+	border-bottom: 1px solid #101010;
+	margin-top: 2px;
+	cursor: pointer;
+}
+.nav li + li {
+	border-bottom: 1px solid #101010;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+	box-shadow: inset 0px 1px 0 rgba(255, 255, 255, .1);
+}
+.nav > li > .nav-list :focus {
+	border-top: 2px solid #000000;
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+	-webkit-box-shadow: inset 0 -2px 3px #000000;
+	box-shadow: inset 0 -2px 3px #000000;
+}
+.nav>.active>.nav-list,
+.nav>.active>.nav-list:focus,
+.navbar-nav>.active>.nav-list:hover {
+	border-top: 2px solid #000000;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	-webkit-box-shadow: inset 0 -2px 3px #000000;
+	box-shadow: inset 0 -2px 3px #000000;
+}
+.nav > li > .nav-list:hover,
+.nav > li > .nav-list:focus {
+	text-decoration: none;
+}
+.navbar {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+}
+.navbar-modityTexted-top {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+.navbar-modityTexted-top {
+	top: 0;
+	border-width: 0 0 1px;
+}
+.navbar-nav {
+	margin: 2px -15px;
+}
+.navbar-inverse {
+	background-color: #222;
+	border-color: #080808;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+	background-color: transparent;
+}
+.navbar-inverse .navbar-collapse {
+	border-color: #101010;
+}
+.navbar-inverse .navbar-toggle {
+	border-color: #333;
+}
+.navbar-inverse .navbar-nav>li>.nav-list {
+	color: #EEEEEE;
+}
+.navbar-inverse .navbar-nav>li>.nav-list:focus,
+.navbar-inverse .navbar-nav>li>.nav-list:hover {
+	background-color: #101010;
+	color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>.nav-list,
+.navbar-inverse .navbar-nav>.active>.nav-list:focus,
+.navbar-inverse .navbar-nav>.active>.nav-list:hover {
+	background-color: #101010;
+	color: #fff;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-right: 15px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.navbar-toggle:focus {
+	outline: 0;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #FFF;
+}
+.navbar-toggle .icon-bar {
+	display: block;
+	width: 40px;
+	height: 2px;
+	border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #333;
+}
+.navbar-inverse .navbar-toggle {
+	border-color: #333;
+	border-top-color: rgb(51, 51, 51);
+	border-right-color: rgb(51, 51, 51);
+	border-bottom-color: rgb(51, 51, 51);
+	border-left-color: rgb(51, 51, 51);
+}
+.container:before,
+.container:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-brand:before,
+.navbar-brand:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-toggle:after,
+.navbar-toggle:before,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.footbut .footnavbar:before,
+.footbut .footnavbar:after,
+.footbut:before,
+.footbut:after,
+.alert-but:before,
+.alert-but:after {
+	display: table;
+	content: " ";
+}
+.content p:after,
+.view-alert:after,
+.alert-but:after,
+.navbar-toggle:after,
+.container:after,
+.nav:after,
+.navbar-brand:after,
+.navbar:after,
+.navbar-header:after,
+.footbut .footnavbar:after,
+.footbut:after,
+.navbar-collapse:after {
+	clear: both;
+}
+@media (max-width: 320px) {
+	.navbar-brand {
+		margin-left: 5px;
+		padding-left: 2px;
+	}
+	.newlist {
+		position: absolute;
+		right: 75px;
+		top: 12px;
+	}
+	.navbar-toggle {
+		margin-right: 5px;
+	}
+}

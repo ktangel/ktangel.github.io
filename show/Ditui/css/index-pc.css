@@ -1,0 +1,221 @@
+#date {
+	display: block;
+}
+.newlist {
+	position: absolute;
+	right: 175px;
+	top: 12px;
+}
+.navbar-toggle .icon-bar {
+	width: 100px;
+}
+#navbar-brand {
+	display: none;
+}
+.pushup {
+	bottom: 255px;
+	left: 35%;
+	z-index: 99;
+}
+.pushdown {
+	z-index: 100;
+	top: 255px;
+	left: 35%;
+}
+.footbut .Prev:hover,
+.footbut .Next:hover {
+	background-color: #666666;
+}
+.footbut {
+	display: inline-block;
+}
+.footnavbar > li {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: 0;
+}
+.footbut button.Prev,
+.footbut button.Next {
+	font-weight: bolder;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background-color: orangered;
+	height: 34px;
+	width: 80px;
+}
+.footbut .footnavbar .PageList {
+	width: 40%;
+	position: relative;
+	display: block;
+	text-align: center;
+	float: left;
+}
+.footbut .footnavbar .Prev {
+	float: left;
+}
+.footbut .footnavbar .Next {
+	float: right;
+}
+@media only screen and (min-width: 700px) {
+	.container {
+		width: 570px;
+	}
+	.view-data span,
+	.content label {
+		padding: 2px 4px;
+		font-weight: bold;
+		font-size: 17px;
+		color: #666666;
+	}
+	.view-data>div {
+		width: 420px;
+		display: block;
+		float: left;
+	}
+	.footbut .footnavbar .PageList {
+		width: 47%;
+		position: relative;
+		display: block;
+		text-align: center;
+		float: left;
+	}
+	.footbut .footnavbar .Prev {
+		float: left;
+		margin-left: 20%;
+	}
+	.footbut .footnavbar .Next {
+		float: right;
+	}
+}
+@media only screen and (min-width: 1100px) {
+	.container {
+		width: 1080px;
+	}
+	.view-data>div {
+		width: 400px;
+		display: block;
+		float: left;
+	}
+	.nav > li {
+		position: relative;
+		display: table;
+		margin: 5px auto;
+	}
+	.nav > li div {
+		display: block;
+		float: left;
+		margin: 2px auto;
+		padding: 5px 10px;
+		/*width: 350px;*/
+	}
+	.nav p,
+	.nav span {
+		font-size: 17px!important;
+	}
+	.navbar-inverse .navbar-nav>li>.nav-list {
+		border-bottom: 2px solid #DDDDDD;
+	}
+	.navbar-inverse .navbar-nav>.active>.nav-list,
+	.navbar-inverse .navbar-nav>.active>.nav-list:focus,
+	.navbar-inverse .navbar-nav>.active>.nav-list:hover {
+		border: 2px solid #FCAB2B;
+	}
+	.center-view .content {
+		margin: 10px 10%;
+		min-height: 400px;
+	}
+	/*============= 表单样式 ＝＝＝＝＝＝＝＝＝＝*/
+	
+	#editbug>div .required {
+		position: relative;
+		top: 3px;
+		font-size: 18px;
+		font-weight: bolder;
+		color: red;
+	}
+	.content div {
+		padding: 2px 0;
+		margin: 4px 4px;
+	}
+	.content textarea {
+		font-size: 18px;
+		height: 60px;
+	}
+	.content input {
+		line-height: 20px;
+		margin-left: 6px;
+		font-size: 20px;
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	input#orderAmount {
+		width: 130px;
+	}
+	input#qrcodeNo {
+		width: 160px;
+	}
+	.content input[type=text] {
+		width: 70%;
+	}
+	.content input[type=number] {
+		width: 100px;
+	}
+	.view-data span,
+	.content label {
+		padding: 2px 4px;
+		font-weight: bold;
+		font-size: 18px;
+		color: #666666;
+	}
+	.content label {
+		margin: 4px 0;
+	}
+	.view-data .data-show {
+		font-weight: normal;
+		font-size: 16px;
+		color: #000000;
+	}
+	.content .in-bugLevel select {
+		font-size: 15px;
+	}
+	.content .in-submitPerson input,
+	.content .in-dutyPerson input {
+		padding-left: 2px;
+	}
+	.viewbody>div span:first-child {
+		color: #666666;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.content .activityName p,
+	.content .activityRemark p {
+		word-wrap: break-word;
+		width: 100%;
+		font-size: 16px;
+		padding: 4px;
+	}
+	.content input {
+		width: 80%;
+	}
+	.center-view .content textarea {
+		margin-top: 6px;
+		width: 100%;
+		padding: 5px;
+		min-height: 100px;
+		height: auto;
+	}
+}
+@media only screen and (min-width: 1300px) {
+	.view-data>div {
+		width: 500px;
+		display: block;
+		float: left;
+	}
+}
+/*============= 表单样式 ＝＝＝＝＝＝＝＝＝＝*/

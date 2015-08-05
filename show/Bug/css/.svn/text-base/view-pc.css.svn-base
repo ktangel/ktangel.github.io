@@ -1,0 +1,759 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+p {
+	margin: 7px 2px;
+	padding: 2px;
+}
+div {
+	display: block;
+}
+body {
+	font-family: arial;
+	font-size: 14px;
+	touch-action: none;
+	-ms-touch-select: none;
+}
+a {
+	text-decoration: none;
+}
+button:focus,
+button:hover {
+	border-style: none;
+}
+.center-view {
+	position: relative;
+	background-color: #F4F4F4;
+	text-align: center;
+}
+.center-view .content span {
+	padding: 0 4px;
+}
+.center-view .content {
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 60px;
+	padding: 5px;
+	margin-bottom: 20px;
+	text-align: left;
+	overflow-x: auto;
+}
+/*============== 表单样式 ＝＝＝＝＝＝＝＝＝＝*/
+
+.content div {
+	margin: 6px 4px;
+}
+.content textarea {
+	height: 60px;
+}
+.content input {
+	margin-left: 4px;
+}
+.content .in-modityTime input,
+.content .in-discoverTime input,
+.content .in-submitPerson input,
+.content .in-dutyPerson input {
+	font-size: 14px;
+}
+input.status {
+	margin-left: 20px;
+}
+.content .in-bugLevel select {
+	font-size: 15px;
+}
+.content .in-submitPerson input,
+.content .in-dutyPerson input {
+	padding-left: 2px;
+}
+.content .matterText p,
+.content .modityText p,
+.content .lossText p {
+	width: 100%;
+	font-size: 18px;
+	padding: 4px;
+}
+.center-view .content textarea {
+	margin-top: 10px;
+	width: 100%;
+	padding: 5px;
+}
+.date-brand>span {
+	line-height: 40px;
+	float: left;
+	margin-right: 4px;
+}
+.date-brand>input {
+	font-size: 22px;
+}
+.date-brand .all {
+	margin-left: 10px;
+	padding: 7px;
+	border: transparent;
+	border-radius: 2px;
+	background-color: #FFFFFF;
+}
+/*============== 弹出框样式＝＝＝＝＝＝＝＝＝＝*/
+
+.view-alert {
+	display: none;
+	/*display: block;*/
+	
+	position: fixed;
+	z-index: 1300;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .7);
+}
+.view-alert .alert-ad {
+	text-align: center;
+	background: #F4F4F4;
+	border-radius: 15px;
+	/*height: 250px;*/
+	/*width: %;*/
+	
+	margin: auto;
+	position: absolute;
+	bottom: 30%;
+	top: 30%;
+	left: 5%;
+	right: 5%;
+}
+.alert-title {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 36px;
+	border-bottom: 2px solid #E4B9B9;
+	margin: 5px 0;
+	text-align: center;
+}
+.alert-message {
+	position: absolute;
+	font-size: 15px;
+	bottom: 30%;
+	top: 35%;
+	/*text-align: center;*/
+	
+	left: 5%;
+	right: 5%;
+	padding: 10px 6px;
+	text-align: center;
+}
+.alert-but {
+	position: absolute;
+	border-top: 1px solid #E4B9B9;
+	bottom: 0px;
+	height: 80px;
+	/*padding: 25px;*/
+	
+	left: 5%;
+	right: 5%;
+	/*padding: 20px 60px;*/
+	/*line-height: 40px;*/
+}
+.alert-but .but-fixed {
+	position: absolute;
+	height: 50px;
+	top: 0;
+	left: 5%;
+	right: 5%;
+}
+.alert-but .alert-enter {
+	float: right;
+	padding: 15px;
+}
+.alert-but .alert-close button,
+.alert-but .alert-enter button {
+	height: 50px;
+	width: 80px;
+	font-size: 20px;
+}
+.alert-but .alert-close {
+	padding: 15px;
+	float: left;
+}
+/*============== 表单检查JQ插入样式＝＝＝＝＝＝＝＝＝＝*/
+
+div.hover-wrap {
+	position: relative;
+	display: inline;
+}
+div.hover-wrap input.invalid {
+	border: 2px solid red;
+}
+div.hover-wrap ul.errors {
+	display: none;
+}
+.div.hover-wrap label.hover {
+	position: relative;
+	top: -0.7em;
+	left: 5px;
+	color: #666;
+}
+span.required {
+	color: red;
+}
+/*============== nav=布局＝＝＝＝＝＝＝＝＝＝*/
+
+@media (min-width: 768px) {
+	.container {
+		width: 760px;
+	}
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+.navbar-brand {
+	font-family: "arial black";
+	float: left;
+	padding: 5px 5px;
+	height: 40px;
+	line-height: 20px;
+	font-size: 15px;
+	margin-left: 15px;
+}
+.navbar-header {
+	min-height: 50px;
+}
+.navbar {
+	min-height: 50px;
+}
+.nav {
+	max-height: 450px;
+	overflow-x: auto;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+.navbar {
+	position: relative;
+	min-height: 50px;
+	/*border-radius: 4px!important;*/
+	
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+}
+.navbar-modityTexted-top {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+.navbar-modityTexted-top {
+	top: 0;
+	border-width: 0 0 1px;
+	/*border-radius: 2px;*/
+}
+.navbar-nav {
+	margin: 2px -15px;
+}
+.navbar-inverse {
+	background-color: #222;
+	border-color: #080808;
+}
+.navbar-inverse .navbar-brand {
+	color: #fff;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+	background-color: transparent;
+}
+.newlist {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+}
+.newlist button,
+.footbut button,
+.nav-footer button,
+.alert-but button {
+	font-weight: bold;
+	font-size: 15px;
+	border-radius: 20px;
+	padding-left: 2px;
+	height: 34px;
+	width: 64px;
+}
+.footbut {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	min-height: 50px;
+	max-height: 50px;
+	min-width: 310px;
+	width: 100%;
+	background-color: #080808;
+	text-align: center;
+}
+.footbut .footnavbar {
+	position: relative;
+	margin-top: 8px;
+	width: 100%;
+	max-height: 60px;
+	list-style: none;
+}
+.footnavbar > li {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: 0;
+}
+.nav-footer {
+	margin-top: 15px;
+	text-align: center;
+}
+.close:focus {
+	background: #888888;
+}
+.close {
+	background-color: #EEE;
+}
+.newbut:focus,
+.del:focus,
+.edit:focus {
+	background: #888888;
+}
+.del,
+.enter {
+	background: #fe5051;
+	color: #fff;
+}
+.newbut {
+	background: #fcab2b;
+	color: #fff;
+}
+.edit {
+	background: #3da2e3;
+	color: #fff;
+}
+.save {
+	background: #3da2e3;
+	color: #fff;
+}
+.save:focus {
+	background: #888888;
+}
+.footbut .footnavbar .save,
+.footbut .footnavbar .edit {
+	float: left;
+	margin-left: 15%;
+}
+.footbut .footnavbar .close,
+.footbut .footnavbar .del {
+	float: right;
+	margin-right: 15%;
+}
+.container:before,
+.container:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-brand:before,
+.navbar-brand:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-toggle:after,
+.navbar-toggle:before,
+.navbar-collapse:before,
+.navbar-collapse:after,
+.footbut .footnavbar:before,
+.footbut .footnavbar:after,
+.footbut:before,
+.footbut:after,
+.alert-but:before,
+.alert-but:after {
+	display: table;
+	content: " ";
+}
+.navbar-brand:after,
+.alert-but:after,
+.navbar-toggle:after,
+.container:after,
+.nav:after,
+.navbar-brand:after,
+.navbar-brand:before,
+.navbar:after,
+.navbar-header:after,
+.footbut .footnavbar:after,
+.footbut:after,
+.navbar-collapse:after {
+	clear: both;
+}
+tr th,
+tr td {
+	display: table-cell;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	min-width: 100px;
+}
+tr th {
+	padding-bottom: 5px;
+	min-width: 70px;
+	text-align: left;
+	display: table-cell;
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+}
+tbody tr td {
+	padding: 4px 0;
+	height: 60px;
+	max-height: 80px;
+	vertical-align: middle;
+	border-top: 1px solid #ddd;
+}
+table {
+	max-width: 98%;
+	min-width: 900px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	display: table;
+	border-spacing: 2px;
+	border-color: gray;
+	border-spacing: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+.footer {
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+	position: relative;
+	background: #E3E3E3;
+	text-align: center;
+}
+.footul {
+	position: absolute;
+	bottom: 18px;
+	left: 5px;
+	right: 5px;
+	text-align: center;
+}
+.footer ul {
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	list-style: none;
+}
+.footer ul li {
+	margin-left: 60px;
+	float: left;
+	line-height: 5px;
+	min-width: 25px;
+	cursor: pointer;
+}
+.footer li a {
+	border: 1px solid transparent;
+	border-radius: 6px;
+	font: "微软雅黑";
+	font-size: 20px;
+	font-weight: bold;
+	padding: 6px;
+	color: #FFFFFF;
+	background-color: #666666;
+}
+tr td.modityTime,
+tr td.discoverTime {
+	min-width: 60px;
+	max-width: 110px;
+	padding: 5px;
+}
+tr td.bugLevel,
+tr td.submitPerson,
+tr td.dutyPerson {
+	min-width: 60px;
+	font-size: 16px;
+}
+tr td .matterText,
+tr td .modityText,
+tr td .lossText {
+	text-align: left;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	font-size: 14px;
+	min-width: 9em;
+	padding-right: 5px;
+	max-width: 100px;
+	overflow-y: auto;
+	height: auto;
+}
+/*tr.active{
+	background: block;
+}*/
+
+td .modityText {
+	color: #307630;
+}
+td .lossText {
+	min-width: 10em;
+	max-width: 18em;
+	color: #A94442;
+}
+table th.modify,
+table td.modify {
+	min-width: 60px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+td.modify .del-list,
+td.modify .edit {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 4px;
+	width: 50px;
+	height: 35px;
+	border-radius: 4px;
+}
+td.modify .del-list {
+	background: #B92C28;
+	color: #fff;
+}
+td.modify .del-list:hover,
+td.modify .edit:hover {
+	background: #101010;
+}
+table:before,
+table:after,
+.center:before,
+.center:after,
+.footer:before,
+.footer:after,
+.footer ul:before,
+.footer ul:after {
+	display: table;
+	content: " ";
+}
+table:after,
+.nav:after,
+.center:after,
+.footer:after,
+.footer ul:after {
+	clear: both;
+}
+@media (min-width: 1000px) {
+	.center-view {
+		margin-top: 60px;
+		margin-bottom: 50px;
+	}
+	.newlist button,
+	.footbut button,
+	.nav-footer button {
+		border-radius: 10px;
+		font-size: 20px;
+		height: 35px;
+		width: 75px;
+	}
+	.newlist {
+		position: relative;
+		float: right;
+		top: 10px;
+		right: 100px;
+	}
+	.nav-footer {
+		margin-top: 20px;
+	}
+	.container {
+		min-width: 99%;
+	}
+	body {
+		font-size: 18px;
+	}
+	.navbar-header {
+		position: relative;
+		min-height: 55px;
+	}
+	.navbar {
+		min-height: 55px;
+	}
+	#navbar-brand {
+		margin-top: 10px;
+	}
+	.navbar .navbar-brand {
+		font-size: 18px;
+	}
+	.navbar-brand .date-brand {
+		margin: 5px;
+		position: relative;
+		display: block;
+		width: 400px;
+	}
+	.date-brand>span {
+		line-height: 40px;
+		float: left;
+		margin-right: 4px;
+	}
+	.date-brand>input {
+		font-size: 22px;
+	}
+	.date-brand .all {
+		margin-left: 10px;
+		padding: 7px;
+		border: transparent;
+		border-radius: 2px;
+		background-color: #FFFFFF;
+	}
+	.footbut {
+		min-height: 70px;
+	}
+	.footbut .footnavbar {
+		margin-top: 10px;
+	}
+	.footnavbar > li {
+		margin-left: 12.0%;
+	}
+	.content.editview,
+	.content.newview {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-bottom: 80px;
+	}
+	.content input[type="text"] {
+		padding: 5px;
+	}
+	.content div {
+		margin: 10px 0;
+	}
+	.content textarea {
+		min-height: 150px;
+	}
+	.content .in-modityTime input,
+	.content .in-discoverTime input,
+	.content .in-submitPerson input,
+	.content .in-dutyPerson input {
+		font-size: 18px;
+	}
+	.content .in-bugLevel select {
+		font-size: 18px;
+	}
+	.content .in-submitPerson input,
+	.content .in-dutyPerson input {
+		padding-left: 4px;
+	}
+	.content .matterText p,
+	.content .modityText p,
+	.content .lossText p {
+		width: 100%;
+		font-size: 18px;
+		padding: 4px;
+	}
+	.center-view .content textarea {
+		margin-top: 12px;
+		width: 100%;
+		padding: 6px;
+	}
+	.content .in-modityTime {
+		margin-top: 6px;
+	}
+	.view-alert .alert-ad {
+		left: 30%;
+		right: 30%;
+	}
+	.alert-title {
+		font-size: 1.1em;
+		padding: 15px 20px;
+		border-bottom: 3px solid #E4B9B9;
+		margin: 16px 0;
+	}
+	.alert-message {
+		font-size: 1em;
+		/*left: 15%;*/
+		/*right: 15%;*/
+		
+		padding: 15px 10px;
+	}
+	.alert-but {
+		border-top: 1px solid #E4B9B9;
+		bottom: 0px;
+		height: 100px;
+		left: 5%;
+		right: 5%;
+	}
+	.alert-but .but-fixed {
+		position: absolute;
+		height: 60px;
+		top: 0;
+		left: 20%;
+		right: 20%;
+	}
+	.alert-but .alert-close button,
+	.alert-but .alert-enter button {
+		height: 50px;
+		width: 80px;
+		font-size: 1.2em;
+	}
+	tr td.modityTime,
+	tr td.discoverTime {
+		min-width: 80px;
+		max-width: 120px;
+		padding: 5px;
+	}
+	tr td.bugLevel,
+	tr td.submitPerson,
+	tr td.dutyPerson {
+		min-width: 60px;
+		max-width: 120px;
+		font-size: 16px;
+		padding: 5px;
+	}
+	tr td .matterText,
+	tr td .modityText,
+	tr td .lossText {
+		text-align: left;
+		margin-top: 4px;
+		margin-bottom: 4px;
+		font-size: 14px;
+		min-width: 200px;
+		max-width: 400px;
+		height: 80px;
+		padding-right: 5px;
+	}
+	td .modityText {
+		color: #307630;
+	}
+	td .lossText {
+		min-width: 10em;
+		max-width: 18em;
+		color: #A94442;
+	}
+	table th.modify,
+	table td.modify {
+		min-width: 90px;
+		padding-left: 5px;
+		padding-right: 5px;
+		text-align: center;
+	}
+	td.modify .del-list,
+	td.modify .edit {
+		font-size: 15px;
+		font-weight: bold;
+		margin: 4px;
+		width: 50px;
+		height: 35px;
+		border-radius: 4px;
+	}
+}
+/*============== 表单样式 ＝＝＝＝＝＝＝＝＝＝*/
+/*============== 表单样式 ＝＝＝＝＝＝＝＝＝＝*/

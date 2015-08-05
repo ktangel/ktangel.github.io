@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+
+	<head>
+		<meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+		<meta charset="utf-8">
+		<title>Bug统计查看</title>
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/index-m.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="navbar navbar-modityTexted-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="newlist">
+						<button type="button" class="newbut">新 建</button>
+					</div>
+					<div id="navbar-brand" class="navbar-brand">
+						<a>
+						BUG列表
+					</a>
+					</div>
+					<div id="date" class="navbar-brand">
+						<label>按日期筛选:</label>
+						<input type="month" id="selectmonth" name="selectmonth" autocomplete="on"></input>
+						<button type="button" class="all">全部</button>
+					</div>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<div id="pushdown-list" class="pushdown-list">
+							上一页
+						</div>
+						<div id="pushup-list" class="pushup-list">
+							下一页
+						</div>
+					</ul>
+					<div class="nav-footer">
+						<button type="button" class="nav-close">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="fixed-view">
+			<div id="scroller" class="center-view">
+				<div id="content" class="content">
+					<div class="discoverTime">
+						<span>Bug发现时间 :</span>
+						<span id="discoverTime"></span>
+					</div>
+					<div class="modityTime">
+						<span>Bug修正时间 :</span>
+						<span id="modityTime"></span>
+					</div>
+					<div class="bugLevel">
+						<span>事故等级 :</span>
+						<span id="bugLevel"></span>
+					</div>
+					<div class="dutyPerson">
+						<span>责任人 :</span>
+						<span id="dutyPerson"></span>
+					</div>
+					<div class="submitPerson">
+						<span>提交人 :</span>
+						<span id="submitPerson"></span>
+
+					</div>
+					<div class="matterText">
+						<span>事故问题描述 :</span>
+						<p id="matterText">数据加载中</p>
+					</div>
+					<div class="modityText">
+						<span>事故修正方法 :</span>
+						<p id="modityText">数据加载中</p>
+					</div>
+					<div class="lossText">
+						<span>造成损失估计 :</span>
+						<p id="lossText">数据加载中</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footbut">
+			<ul class="footnavbar">
+				<li>
+					<button id="LeftBut" class="getedit" type="button">修 改</button>
+				</li>
+				<li>
+					<button id="ReigthBut" class="getdel" type="button">删 除</button>
+				</li>
+			</ul>
+		</div>
+		<div class="view-alert">
+			<div class="alert-Table">
+				<div class="alert-cell">
+					<div class="alert-center">
+						<div class="alert-title">友情提示</div>
+						<div class="alert-message">信息内容区</div>
+						<div id="alert-but" class="alert-but">
+							<div class="but-fixed">
+								<div class="alert-close">
+									<button id="cancel" class="cancel">取消</button>
+								</div>
+								<div class="alert-enter">
+									<button id="enter-del" class="enter">确定</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="view-loading" class="view-loading">
+			loading
+		</div>
+		<script src="js/jquery-min.js" type="text/javascript"></script>
+		<script src="js/iscroll-probe.js"></script>
+		<script src="js/index-m.js" type="text/javascript"></script>
+		<script src="js/command-m.js" type="text/javascript"></script>
+		<script src="js/models.js" type="text/javascript"></script>
+	</body>
+
+</html>
