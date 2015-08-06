@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+	<html>
+
+	<head>
+		<meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>RGB
+			<=>HEX互转工具</title>
+		<link rel="stylesheet" type="text/css" href="./style/app.css">
+		</script>
+
+		<body>
+			<div class="copy">
+				HEX&&RGB互转工具 &copy;LeoLiu
+			</div>
+			<div class="colorRGB">
+				<ul class="colorContainer">
+					<li>
+						<input type="text" class="colorBox" id="colorR" placeholder="" tabindex="1" min="0" max="255" maxlength="3">
+						<label>红(R)</label>
+					</li>
+					<li>
+						<input type="text" class="colorBox" id="colorG" placeholder="" tabindex="2" min="0" max="255" maxlength="3">
+						<label>绿(G)</label>
+					</li>
+					<li>
+						<input type="text" class="colorBox" id="colorB" name="colorB" placeholder="" tabindex="3" min="0" max="255" maxlength="3">
+						<label>蓝(B)</label>
+					</li>
+					<li>
+						<input type="text" class="colorBox" id="opcity" name="opcity" placeholder="" tabindex="3" min="0" max="100" step="0.01" maxlength="3">
+						<label>opcity(%)</label>
+					</li>
+				</ul>
+			</div>
+			<div class="set-body">
+				<div class="hexnum-body">
+					<label for="hexnum">#</label>
+					<input type="text" id="hexnum" name="hexnum" maxlength="6" />
+				</div>
+				<div class="plac-body">
+					<label for="plac">预设</label>
+					<input type="text" id="plac" name="plac" placeholder="red、balck……" />
+				</div>
+				<div class="color-body">
+					<input type="color" class="setcolor" id="setcolor" name="setcolor" />
+				</div>
+			</div>
+			<div class="show-body">
+				<div class="rgbview" id="rgbview"></div>
+				<label class="resultHex">换算结果区</label>
+				<div class="back">
+					<div id="showborder"><span class="title">边框色</span>
+						<div id="showcolor"><span class="title">背景色</span></div>
+					</div>
+				</div><span class="title">阴影色</span>
+			</div>
+			<script type="text/javascript" src="./style/foundation.min.js"></script>
+			<script type="text/javascript" src="./style/app.js"></script>
+		</body>
+
+	</html>

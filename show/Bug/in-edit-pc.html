@@ -1,0 +1,53 @@
+<div class="content editview">
+	<div id="editbug">
+		<div class="in-discoverTime">
+			<label for="discoverTime">Bug发现时间 </label>
+			<input type="datetime-local" autocomplete="on" id="discoverTime" required="required" name="discoverTime" />
+		</div>
+		<div class="in-modityTime">
+			<label for="modityTime">Bug修正时间 </label>
+			<input type="datetime-local" data autocomplete="on" id="modityTime" min="2015-05-01" name="modityTime" class="date" />
+			<input type="checkbox" name="status" value="0" class="status" id="status">
+			<label for="status">已修正</label>
+		</div>
+		
+		<div class="in-bugLevel">
+			<label for="bugLevel">事故等级 </label>
+			<select id="bugLevel" required="required" class="bugLevel">
+				<option value="0">提交测试Bug</option>
+				<option value="1">生产环境Bug</option>
+				<option value="2">生产环境事故</option>
+			</select>
+		</div>
+		<div class="in-dutyPerson">
+			<label for="dutyPerson" class="line-one">责任人 </label>
+			<input type="text" autocomplete="on" id="dutyPerson" required="required" name="dutyPerson" class="dutyPerson text" />
+		</div>
+		<div class="in-submitPerson">
+			<label for="submitPerson">提交人 </label>
+			<input type="text" autocomplete="on" id="submitPerson" name="submitPerson" class="submitPerson text" required="required" />
+		</div>
+		<div class="in-matterText">
+			<label for="matterText">事故问题描述 </label>
+			<textarea form="editbug" id="matterText" name="matterText" class="matterText text" required="required"></textarea>
+		</div>
+		<div class="in-modityText">
+			<label for="modityText">事故修正方法 </label>
+			<textarea form="editbug" id="modityText" name="modityText" class="modityText text" required="required"></textarea>
+		</div>
+		<div class="in-lossText">
+			<label for="lossText">造成损失估计 </label>
+			<textarea form="editbug" id="lossText" name="lossText" class="lossText text" required="required"></textarea>
+		</div>
+	</div>
+</div>
+<div class="footbut">
+	<ul class="footnavbar">
+		<li>
+			<button form="editbug" type="submit" class="save" id="getsave">保存</button>
+		</li>
+		<li>
+			<button class="close" onclick="fn.Page.InitView()">关 闭</button>
+		</li>
+	</ul>
+</div>

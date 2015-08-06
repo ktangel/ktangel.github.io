@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+
+	<head>
+		<meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+		<meta charset="utf-8">
+		<title>微得客 地推统计表</title>
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="navbar navbar-modityTexted-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="newlist">
+						<button type="button" class="newbut">新 建</button>
+					</div>
+					<div id="navbar-brand" class="navbar-brand">
+						<a>
+						微得客 地推统计表
+						</a>
+					</div>
+					<div id="date" class="navbar-brand">
+						<label>按日期筛选:</label>
+						<input type="month" id="selectmonth" name="selectmonth" autocomplete="on"></input>
+						<button type="button" class="all">全部</button>
+
+						<!--<div class="queryMonth">
+							<button id="queryMonth" type="button" class="Query" value="查询"></button>
+						</div>-->
+					</div>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<div id="pushdown-list" class="pushdown-list">
+							上一页
+						</div>
+						<div id="pushup-list" class="pushup-list">
+							下一页
+						</div>
+					</ul>
+					<div class="nav-footer">
+						<button type="button" class="nav-close">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="fixed-view">
+			<div id="scroller" class="center-view">
+				<div id="content" class="content">
+					<div class="updateTime"><span>更新时间:</span><span id="updateTime" class="data-show"></span>
+					</div>
+					<div class="generalizePerson"><span>地推人员:</span><span id="generalizePerson" class="data-show"></span>
+					</div>
+					<div class="generalizeTime"><span>地推时间:</span><span id="generalizeTime" class="data-show"></span>
+					</div>
+					<div class="qrcodeNo"><span>推广二维码编号:</span><span id="qrcodeNo" class="data-show"></span>
+					</div>
+					<div class="activityName"><span>活动主题:</span><span id="activityName" class="data-show"></span>
+					</div>
+					<div class="activityExplain"><span>活动说明:</span><span id="activityExplain" class="data-show"></span>
+					</div>
+					<div class="donationNum"><span>赠品数量:</span><span id="donationNum" class="data-show"></span>
+					</div>
+					<div class="address"><span>地推地点:</span><span id="address" class="data-show"></span>
+					</div>
+					<div class="districtTrait"><span>区域特点:</span><span id="districtTrait" class="data-show"></span>
+					</div>
+					<div class="addressType"><span>地推类型:</span><span id="addressType" class="data-show"></span>
+					</div>
+					<div class="coverageNum"><span>覆盖人数:</span><span id="coverageNum" class="data-show"></span>
+					</div>
+					<div class="attentionNum"><span>关注人数:</span><span id="attentionNum" class="data-show"></span>
+					</div>
+					<div class="registerNum"><span>注册人数:</span><span id="registerNum" class="data-show"></span>
+					</div>
+					<div class="orderNum"><span>下单数量:</span><span id="orderNum" class="data-show"></span>
+					</div>
+					<div class="finishNum"><span>完成数量:</span><span id="finishNum" class="data-show"></span>
+					</div>
+					<div class="orderAmount"><span>订单交易金额:</span><span id="orderAmount" class="data-show"></span>
+					</div>
+					<div class="activityRemark"><span>活动总结:</span><span id="activityRemark" class="data-show"></span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footbut">
+			<ul class="footnavbar">
+				<li>
+					<button id="LeftBut" class="getedit" type="button">修 改</button>
+				</li>
+				<li>
+					<button id="ReigthBut" class="getdel" type="button">删 除</button>
+				</li>
+			</ul>
+		</div>
+		<div class="view-alert">
+			<div class="alert-Table">
+				<div class="alert-cell">
+					<div class="alert-center">
+						<div class="alert-title">友情提示</div>
+						<div class="alert-message">信息内容区</div>
+						<div id="alert-but" class="alert-but">
+							<div class="but-fixed">
+								<div class="alert-close">
+									<button id="cancel" class="cancel">取消</button>
+								</div>
+								<div class="alert-enter">
+									<button id="enter-del" class="enter">确定</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="view-loading" class="view-loading">
+			loading
+		</div>
+		<script src="js/jquery-min.js" type="text/javascript"></script>
+		<script src="js/iscroll-probe.js"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+		<script src="js/command-m.js" type="text/javascript"></script>
+		<script src="js/models.js" type="text/javascript"></script>
+	</body>
+
+</html>
